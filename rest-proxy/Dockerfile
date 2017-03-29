@@ -11,7 +11,7 @@ FROM confluent/platform
 MAINTAINER contact@confluent.io
 
 COPY rest-proxy-docker.sh /usr/local/bin/
-
+COPY kafka-rest.properties /etc/kafka-rest/
 RUN ["chown", "-R", "confluent:confluent", "/etc/kafka-rest", "/usr/local/bin/rest-proxy-docker.sh"]
 RUN ["chmod", "+x", "/usr/local/bin/rest-proxy-docker.sh"]
 

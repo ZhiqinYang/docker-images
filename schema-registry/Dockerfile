@@ -11,7 +11,7 @@ FROM confluent/platform
 MAINTAINER contact@confluent.io
 
 COPY schema-registry-docker.sh /usr/local/bin/
-
+COPY schema-registry.properties /etc/schema-registry/
 #TODO Schema Registry needs a log directory.
 RUN ["chown", "-R", "confluent:confluent", "/etc/schema-registry/schema-registry.properties"]
 RUN ["chmod", "+x", "/usr/local/bin/schema-registry-docker.sh"]

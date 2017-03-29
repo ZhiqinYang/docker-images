@@ -12,7 +12,7 @@ if [ ! -z "$RP_CFG_URL" ]; then
   fi
 fi
 
-/usr/bin/docker-edit-properties --file ${RP_CFG_FILE} --include 'KAFKA_REST_(.*)' --include 'RP_(.*)' --exclude '^RP_CFG_'
+#/usr/bin/docker-edit-properties --file ${RP_CFG_FILE} --include 'KAFKA_REST_(.*)' --include 'RP_(.*)' --exclude '^RP_CFG_'
 
 # Fix for issue #77, PR #78: https://github.com/confluentinc/kafka-rest/pull/78/files
 sed -i 's/\"kafka\"//' /usr/bin/kafka-rest-run-class

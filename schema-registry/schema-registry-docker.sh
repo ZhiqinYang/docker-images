@@ -12,6 +12,6 @@ if [ ! -z "$SR_CFG_URL" ]; then
   fi
 fi
 
-/usr/bin/docker-edit-properties --file ${SR_CFG_FILE} --include 'SR_(.*)' --include 'SCHEMA_REGISTRY_(.*)' --exclude '^SR_CFG_FILE'
+#/usr/bin/docker-edit-properties --file ${SR_CFG_FILE} --include 'SR_(.*)' --include 'SCHEMA_REGISTRY_(.*)' --exclude '^SR_CFG_FILE'
 
 exec /usr/bin/schema-registry-start ${SR_CFG_FILE}
